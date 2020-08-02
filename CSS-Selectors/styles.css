@@ -1,0 +1,28 @@
+/* li element that comes IMMEDIATELY after the first element type li */
+li:first-of-type + li {
+    color: red;
+  }
+
+
+/* span elements that are siblings of and subsequent to any p element*/
+p ~ span {
+    color: red;
+  }
+
+/* span elements that are immediately children of the div */ 
+span {
+    background-color: white;
+}
+
+div > span {
+    background-color: DodgerBlue;
+}
+
+li {
+    list-style-type: disc;
+  }
+
+/* li elements that are descendants of another li element */
+li li {
+    list-style-type: circle;
+  }

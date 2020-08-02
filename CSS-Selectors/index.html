@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Adjacent sibling combinator -->
+    <h2>Adjacent sibling combinator</h2>
+    <ul>
+        <li>One</li>
+        <li>Two!</li>
+        <li>Three</li>
+      </ul>
+
+    <!-- General sibling combinator -->
+    <h2>General sibling combinator</h2>
+    <span>This is not red.</span>
+    <p>Here is a paragraph.</p>
+    <code>Here is some code.</code>
+    <span>And here is a red span!</span>
+    <code>More code...</code>
+    <span>And this is a red span!</span>
+
+    <!-- Child combinator -->
+    <h2>Child combinator</h2>
+    <div>
+        <span>Span #1, in the div.
+          <span>Span #2, in the span that's in the div.</span>
+        </span>
+        <span>Span #3, in the first div</span>
+      </div>
+      <span>Span #4, not in the div at all.</span>
+
+    <!-- Descendant combinator -->
+    <h2>Descendant combinator</h2>
+    <ul>
+        <li>
+          <div>Item 1</div>
+          <ul>
+            <li>Subitem A</li>
+            <li>Subitem B</li>
+          </ul>
+        </li>
+        <li>
+          <div>Item 2</div>
+          <ul>
+            <li>Subitem A</li>
+            <li>Subitem B</li>
+          </ul>
+        </li>
+      </ul>
+
+</body>
+</html>
