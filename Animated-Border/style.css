@@ -1,0 +1,27 @@
+a {
+  text-decoration: none;
+  background-color: Tomato;
+  color: white;
+  padding: 20px;
+  display: inline-block;
+
+  font-family: Arial, sans-serif;
+}
+
+.animatedBorder {
+  position: relative;
+}
+
+.animatedBorder:after {
+  content: "";
+  position: absolute;
+  border-bottom: 5px solid black;
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  transition: all 500ms;
+}
+
+.animatedBorder:hover:after {
+  right: 0;
+}
