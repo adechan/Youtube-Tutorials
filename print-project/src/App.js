@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import PrintComponent from "./PrintComponent";
+import PrintComponent2 from "./PrintComponent2";
 import './App.css';
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
           Learn React
         </a>
       </header>
-      <PrintComponent />
+      <PrintComponent2 />
     </div>
   );
 }

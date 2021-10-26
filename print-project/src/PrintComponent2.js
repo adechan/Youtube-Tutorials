@@ -1,21 +1,28 @@
 import React, { useRef } from "react";
-import ReactToPrint from "react-to-print";
 import './App.css';
 import "./styles.css";
+import { useReactToPrint } from "react-to-print";
 
 
-
-export default function PrintComponent() {
+export default function PrintComponent2() {
   let componentRef = useRef();
+
+  const reactToPrintContent = React.useCallback(() => {
+    return componentRef.current;
+  }, [componentRef.current]);
+
+  const handlePrint = useReactToPrint({
+    content: reactToPrintContent,
+    documentTitle: "AwesomeFileName",
+    removeAfterPrint: true,
+  });
 
   return (
     <>
       <div id="print_component">
-        {/* button to trigger printing of target component */}
-        <ReactToPrint
-          trigger={() => <button>Print this out!</button>}
-          content={() => componentRef.current}
-        />
+        <button onClick={handlePrint}>
+        Print using a Functional Component with the useReactToPrint hook
+      </button>
 
         {/* component to be printed */}
         <div style={{ display: "none" }} >
@@ -33,7 +40,6 @@ export const CuteComponent2Functional = React.forwardRef((props, ref) => { // es
 // component to be printed
 class ComponentToPrint extends React.Component {
   render() {
-
     return (
       <div
             className={'page-container'}
@@ -54,13 +60,3 @@ class ComponentToPrint extends React.Component {
     );
   }
 }
-
-
-const Hi = () => {
-  return (
-    <div>
-      asdd
-    </div>
-  )
-}
-
