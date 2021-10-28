@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import './App.css';
 import "./styles.css";
 import { useReactToPrint } from "react-to-print";
+import Image from './image0.jpg'
+import SVG from "./checkmark.svg";
 
 
 export default function PrintComponent2() {
@@ -53,10 +55,25 @@ class ComponentToPrint extends React.Component {
               <div className={'COA-title'} />
               <div className={'grid-subtitle'} />
               <div className={'image'} />
-              <div className={'artwork-info'} />
-              <div className={'logo'} />
+              <div className={'artwork-info'} >
+                  <img src={SVG} alt="" />
+              </div>
+              <div className={'logo'} style={{overflow: 'hidden'}}>
+                <img src={Image} alt="" style={{width: '100%', objectFit: 'cover',}} />
+              </div>
             </div>
           </div>
     );
   }
 }
+
+
+const Hi = () => {
+    return (
+      <div>
+        asdd
+      </div>
+    )
+  }
+  
+  

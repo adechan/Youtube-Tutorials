@@ -55,12 +55,3 @@ class ComponentToPrint extends React.Component {
   }
 }
 
-
-const Hi = () => {
-  return (
-    <div>
-      asdd
-    </div>
-  )
-}
-
